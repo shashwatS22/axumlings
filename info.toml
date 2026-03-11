@@ -1,0 +1,368 @@
+format_version = 1
+welcome_message = """
+Welcome to Axumlings!
+
+Small exercises to get you used to Axum, Tokio, and Rust web development.
+Run the exercises with: cargo run
+"""
+final_message = """
+Congratulations! You've completed all the Axumlings exercises.
+Keep building with Axum and Rust!
+"""
+
+[[exercises]]
+name = "routing1"
+dir = "01_routing"
+test = true
+strict_clippy = false
+hint = "Use Router::new().route(\"/\", get(handler)) to add a GET route."
+
+[[exercises]]
+name = "routing2"
+dir = "01_routing"
+test = true
+strict_clippy = false
+hint = "Add multiple routes with .route() chaining. Use post() for POST handlers."
+
+[[exercises]]
+name = "routing3"
+dir = "01_routing"
+test = true
+strict_clippy = false
+hint = "Use Router::nest() for sub-routes."
+
+[[exercises]]
+name = "path1"
+dir = "02_extractors"
+test = true
+strict_clippy = false
+hint = "Path(id): Path<u32>"
+
+[[exercises]]
+name = "query1"
+dir = "02_extractors"
+test = true
+strict_clippy = false
+hint = "Query(params): Query<HashMap<String, String>>"
+
+[[exercises]]
+name = "json1"
+dir = "02_extractors"
+test = true
+strict_clippy = false
+hint = "Json(payload): Json<CreateUser>"
+
+[[exercises]]
+name = "header1"
+dir = "02_extractors"
+test = true
+strict_clippy = false
+hint = "Use request.headers().get(\"X-User-Name\") or TypedHeader"
+
+[[exercises]]
+name = "json_response1"
+dir = "03_responses"
+test = true
+strict_clippy = false
+hint = "Json(user)"
+
+[[exercises]]
+name = "status1"
+dir = "03_responses"
+test = true
+strict_clippy = false
+hint = "(StatusCode::CREATED, body)"
+
+[[exercises]]
+name = "headers1"
+dir = "03_responses"
+test = true
+strict_clippy = false
+hint = "[(header::CONTENT_TYPE, \"application/json\")]"
+
+[[exercises]]
+name = "arc_state1"
+dir = "04_state"
+test = true
+strict_clippy = false
+hint = "Arc::new(AtomicUsize::new(0)) and .with_state()"
+
+[[exercises]]
+name = "rwlock1"
+dir = "04_state"
+test = true
+strict_clippy = false
+hint = "Arc::new(RwLock::new(HashMap::new()))"
+
+[[exercises]]
+name = "atomic1"
+dir = "04_state"
+test = true
+strict_clippy = false
+hint = "n.fetch_add(1, Ordering::SeqCst)"
+
+[[exercises]]
+name = "sleep1"
+dir = "05_tokio_async"
+test = true
+strict_clippy = false
+hint = "tokio::time::sleep(Duration::from_millis(100)).await"
+
+[[exercises]]
+name = "spawn1"
+dir = "05_tokio_async"
+test = true
+strict_clippy = false
+hint = "tokio::spawn(async move { ... })"
+
+[[exercises]]
+name = "mpsc1"
+dir = "05_tokio_async"
+test = true
+strict_clippy = false
+hint = "tokio::sync::mpsc::channel; sender.send(msg).await"
+
+[[exercises]]
+name = "shutdown1"
+dir = "05_tokio_async"
+test = true
+strict_clippy = false
+hint = "with_graceful_shutdown(shutdown_signal())"
+
+[[exercises]]
+name = "nested1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "Nested structs with Serialize, Deserialize"
+
+[[exercises]]
+name = "enum1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "#[serde(tag = \"type\")]"
+
+[[exercises]]
+name = "option1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "Option with #[serde(default)]"
+
+[[exercises]]
+name = "rename1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "#[serde(rename = \"json_name\")]"
+
+[[exercises]]
+name = "flatten1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "#[serde(flatten)]"
+
+[[exercises]]
+name = "into_response1"
+dir = "07_errors"
+test = true
+strict_clippy = false
+hint = "impl IntoResponse for Error"
+
+[[exercises]]
+name = "thiserror1"
+dir = "07_errors"
+test = true
+strict_clippy = false
+hint = "#[derive(thiserror::Error)]"
+
+[[exercises]]
+name = "question1"
+dir = "07_errors"
+test = true
+strict_clippy = false
+hint = "fn handler() -> Result<impl IntoResponse, AppError> and ?"
+
+[[exercises]]
+name = "trace1"
+dir = "08_middleware"
+test = true
+strict_clippy = false
+hint = "TraceLayer::new_for_http()"
+
+[[exercises]]
+name = "auth1"
+dir = "08_middleware"
+test = true
+strict_clippy = false
+hint = "Check Authorization header before handler"
+
+[[exercises]]
+name = "cors1"
+dir = "08_middleware"
+test = true
+strict_clippy = false
+hint = "CorsLayer::permissive()"
+
+[[exercises]]
+name = "timeout1"
+dir = "08_middleware"
+test = true
+strict_clippy = false
+hint = "TimeoutLayer::new(Duration::from_secs(1))"
+
+[[exercises]]
+name = "pool1"
+dir = "09_db"
+test = true
+strict_clippy = false
+hint = "pool.fetch_all, query_as"
+
+[[exercises]]
+name = "transaction1"
+dir = "09_db"
+test = true
+strict_clippy = false
+hint = "pool.begin().await, tx.commit()"
+
+[[exercises]]
+name = "env1"
+dir = "10_config"
+test = true
+strict_clippy = false
+hint = "env::var(\"PORT\").ok().and_then(|s| s.parse().ok())"
+
+[[exercises]]
+name = "clap1"
+dir = "10_config"
+test = true
+strict_clippy = false
+hint = "#[derive(Parser)] struct Args"
+
+[[exercises]]
+name = "ws1"
+dir = "11_websockets"
+test = true
+strict_clippy = false
+hint = "WebSocketUpgrade, ws.on_upgrade"
+
+[[exercises]]
+name = "health1"
+dir = "12_production"
+test = true
+strict_clippy = false
+hint = "GET /health returns {\"status\":\"ok\"}"
+
+[[exercises]]
+name = "concurrency1"
+dir = "12_production"
+test = true
+strict_clippy = false
+hint = "ConcurrencyLimit::new(2)"
+
+[[exercises]]
+name = "logging1"
+dir = "12_production"
+test = true
+strict_clippy = false
+hint = "tracing::info!"
+
+[[exercises]]
+name = "move1"
+dir = "13_ownership"
+test = true
+strict_clippy = false
+hint = "Use borrow(&s) instead of take(s)"
+
+[[exercises]]
+name = "clone1"
+dir = "13_ownership"
+test = true
+strict_clippy = false
+hint = "s.clone() when you need a copy"
+
+[[exercises]]
+name = "lifetime1"
+dir = "13_ownership"
+test = true
+strict_clippy = false
+hint = "fn longest<'a>(x: &'a str, y: &'a str) -> &'a str"
+
+[[exercises]]
+name = "arc1"
+dir = "13_ownership"
+test = true
+strict_clippy = false
+hint = "Arc::new, arc.clone() for sharing"
+
+[[exercises]]
+name = "interior1"
+dir = "13_ownership"
+test = true
+strict_clippy = false
+hint = "RefCell::new, .borrow_mut()"
+
+[[exercises]]
+name = "type_enum1"
+dir = "14_type_system"
+test = true
+strict_clippy = false
+hint = "enum Shape { Circle(f64), Rect(f64, f64) }"
+
+[[exercises]]
+name = "type_option1"
+dir = "14_type_system"
+test = true
+strict_clippy = false
+hint = "opt.map(|x| x * 2)"
+
+[[exercises]]
+name = "result1"
+dir = "14_type_system"
+test = true
+strict_clippy = false
+hint = "res.map_err(str::to_string).map(|v| v * 2)"
+
+[[exercises]]
+name = "impl_trait1"
+dir = "14_type_system"
+test = true
+strict_clippy = false
+hint = "impl Iterator<Item = i32>"
+
+[[exercises]]
+name = "from_into1"
+dir = "14_type_system"
+test = true
+strict_clippy = false
+hint = "impl From<u32> for Wrapper"
+
+[[exercises]]
+name = "iterator1"
+dir = "15_traits"
+test = true
+strict_clippy = false
+hint = "v.into_iter().map(|x| x * x).sum()"
+
+[[exercises]]
+name = "display1"
+dir = "15_traits"
+test = true
+strict_clippy = false
+hint = "impl std::fmt::Display for Point"
+
+[[exercises]]
+name = "default1"
+dir = "15_traits"
+test = true
+strict_clippy = false
+hint = "#[derive(Default)]"
+
+[[exercises]]
+name = "send_sync1"
+dir = "15_traits"
+test = true
+strict_clippy = false
+hint = "T: Send + 'static for thread::spawn"

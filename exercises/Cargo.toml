@@ -1,0 +1,428 @@
+[package]
+name = "exercises"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "routing1"
+path = "01_routing/routing1.rs"
+
+[[bin]]
+name = "routing1_sol"
+path = "../solutions/01_routing/routing1.rs"
+
+[[bin]]
+name = "routing2"
+path = "01_routing/routing2.rs"
+
+[[bin]]
+name = "routing2_sol"
+path = "../solutions/01_routing/routing2.rs"
+
+[[bin]]
+name = "routing3"
+path = "01_routing/routing3.rs"
+
+[[bin]]
+name = "routing3_sol"
+path = "../solutions/01_routing/routing3.rs"
+
+[[bin]]
+name = "path1"
+path = "02_extractors/path1.rs"
+
+[[bin]]
+name = "path1_sol"
+path = "../solutions/02_extractors/path1.rs"
+
+[[bin]]
+name = "query1"
+path = "02_extractors/query1.rs"
+
+[[bin]]
+name = "query1_sol"
+path = "../solutions/02_extractors/query1.rs"
+
+[[bin]]
+name = "json1"
+path = "02_extractors/json1.rs"
+
+[[bin]]
+name = "json1_sol"
+path = "../solutions/02_extractors/json1.rs"
+
+[[bin]]
+name = "header1"
+path = "02_extractors/header1.rs"
+
+[[bin]]
+name = "header1_sol"
+path = "../solutions/02_extractors/header1.rs"
+
+[[bin]]
+name = "json_response1"
+path = "03_responses/json_response1.rs"
+
+[[bin]]
+name = "json_response1_sol"
+path = "../solutions/03_responses/json_response1.rs"
+
+[[bin]]
+name = "status1"
+path = "03_responses/status1.rs"
+
+[[bin]]
+name = "status1_sol"
+path = "../solutions/03_responses/status1.rs"
+
+[[bin]]
+name = "headers1"
+path = "03_responses/headers1.rs"
+
+[[bin]]
+name = "headers1_sol"
+path = "../solutions/03_responses/headers1.rs"
+
+[[bin]]
+name = "arc_state1"
+path = "04_state/arc_state1.rs"
+
+[[bin]]
+name = "arc_state1_sol"
+path = "../solutions/04_state/arc_state1.rs"
+
+[[bin]]
+name = "rwlock1"
+path = "04_state/rwlock1.rs"
+
+[[bin]]
+name = "rwlock1_sol"
+path = "../solutions/04_state/rwlock1.rs"
+
+[[bin]]
+name = "atomic1"
+path = "04_state/atomic1.rs"
+
+[[bin]]
+name = "atomic1_sol"
+path = "../solutions/04_state/atomic1.rs"
+
+[[bin]]
+name = "sleep1"
+path = "05_tokio_async/sleep1.rs"
+
+[[bin]]
+name = "sleep1_sol"
+path = "../solutions/05_tokio_async/sleep1.rs"
+
+[[bin]]
+name = "spawn1"
+path = "05_tokio_async/spawn1.rs"
+
+[[bin]]
+name = "spawn1_sol"
+path = "../solutions/05_tokio_async/spawn1.rs"
+
+[[bin]]
+name = "mpsc1"
+path = "05_tokio_async/mpsc1.rs"
+
+[[bin]]
+name = "mpsc1_sol"
+path = "../solutions/05_tokio_async/mpsc1.rs"
+
+[[bin]]
+name = "shutdown1"
+path = "05_tokio_async/shutdown1.rs"
+
+[[bin]]
+name = "shutdown1_sol"
+path = "../solutions/05_tokio_async/shutdown1.rs"
+
+[[bin]]
+name = "nested1"
+path = "06_serde/nested1.rs"
+
+[[bin]]
+name = "nested1_sol"
+path = "../solutions/06_serde/nested1.rs"
+
+[[bin]]
+name = "enum1"
+path = "06_serde/enum1.rs"
+
+[[bin]]
+name = "enum1_sol"
+path = "../solutions/06_serde/enum1.rs"
+
+[[bin]]
+name = "option1"
+path = "06_serde/option1.rs"
+
+[[bin]]
+name = "option1_sol"
+path = "../solutions/06_serde/option1.rs"
+
+[[bin]]
+name = "rename1"
+path = "06_serde/rename1.rs"
+
+[[bin]]
+name = "rename1_sol"
+path = "../solutions/06_serde/rename1.rs"
+
+[[bin]]
+name = "flatten1"
+path = "06_serde/flatten1.rs"
+
+[[bin]]
+name = "flatten1_sol"
+path = "../solutions/06_serde/flatten1.rs"
+
+[[bin]]
+name = "into_response1"
+path = "07_errors/into_response1.rs"
+
+[[bin]]
+name = "into_response1_sol"
+path = "../solutions/07_errors/into_response1.rs"
+
+[[bin]]
+name = "thiserror1"
+path = "07_errors/thiserror1.rs"
+
+[[bin]]
+name = "thiserror1_sol"
+path = "../solutions/07_errors/thiserror1.rs"
+
+[[bin]]
+name = "question1"
+path = "07_errors/question1.rs"
+
+[[bin]]
+name = "question1_sol"
+path = "../solutions/07_errors/question1.rs"
+
+[[bin]]
+name = "trace1"
+path = "08_middleware/trace1.rs"
+
+[[bin]]
+name = "trace1_sol"
+path = "../solutions/08_middleware/trace1.rs"
+
+[[bin]]
+name = "auth1"
+path = "08_middleware/auth1.rs"
+
+[[bin]]
+name = "auth1_sol"
+path = "../solutions/08_middleware/auth1.rs"
+
+[[bin]]
+name = "cors1"
+path = "08_middleware/cors1.rs"
+
+[[bin]]
+name = "cors1_sol"
+path = "../solutions/08_middleware/cors1.rs"
+
+[[bin]]
+name = "timeout1"
+path = "08_middleware/timeout1.rs"
+
+[[bin]]
+name = "timeout1_sol"
+path = "../solutions/08_middleware/timeout1.rs"
+
+[[bin]]
+name = "pool1"
+path = "09_db/pool1.rs"
+
+[[bin]]
+name = "pool1_sol"
+path = "../solutions/09_db/pool1.rs"
+
+[[bin]]
+name = "transaction1"
+path = "09_db/transaction1.rs"
+
+[[bin]]
+name = "transaction1_sol"
+path = "../solutions/09_db/transaction1.rs"
+
+[[bin]]
+name = "env1"
+path = "10_config/env1.rs"
+
+[[bin]]
+name = "env1_sol"
+path = "../solutions/10_config/env1.rs"
+
+[[bin]]
+name = "clap1"
+path = "10_config/clap1.rs"
+
+[[bin]]
+name = "clap1_sol"
+path = "../solutions/10_config/clap1.rs"
+
+[[bin]]
+name = "ws1"
+path = "11_websockets/ws1.rs"
+
+[[bin]]
+name = "ws1_sol"
+path = "../solutions/11_websockets/ws1.rs"
+
+[[bin]]
+name = "health1"
+path = "12_production/health1.rs"
+
+[[bin]]
+name = "health1_sol"
+path = "../solutions/12_production/health1.rs"
+
+[[bin]]
+name = "concurrency1"
+path = "12_production/concurrency1.rs"
+
+[[bin]]
+name = "concurrency1_sol"
+path = "../solutions/12_production/concurrency1.rs"
+
+[[bin]]
+name = "logging1"
+path = "12_production/logging1.rs"
+
+[[bin]]
+name = "logging1_sol"
+path = "../solutions/12_production/logging1.rs"
+
+[[bin]]
+name = "move1"
+path = "13_ownership/move1.rs"
+
+[[bin]]
+name = "move1_sol"
+path = "../solutions/13_ownership/move1.rs"
+
+[[bin]]
+name = "clone1"
+path = "13_ownership/clone1.rs"
+
+[[bin]]
+name = "clone1_sol"
+path = "../solutions/13_ownership/clone1.rs"
+
+[[bin]]
+name = "lifetime1"
+path = "13_ownership/lifetime1.rs"
+
+[[bin]]
+name = "lifetime1_sol"
+path = "../solutions/13_ownership/lifetime1.rs"
+
+[[bin]]
+name = "arc1"
+path = "13_ownership/arc1.rs"
+
+[[bin]]
+name = "arc1_sol"
+path = "../solutions/13_ownership/arc1.rs"
+
+[[bin]]
+name = "interior1"
+path = "13_ownership/interior1.rs"
+
+[[bin]]
+name = "interior1_sol"
+path = "../solutions/13_ownership/interior1.rs"
+
+[[bin]]
+name = "type_enum1"
+path = "14_type_system/type_enum1.rs"
+
+[[bin]]
+name = "type_enum1_sol"
+path = "../solutions/14_type_system/type_enum1.rs"
+
+[[bin]]
+name = "type_option1"
+path = "14_type_system/type_option1.rs"
+
+[[bin]]
+name = "type_option1_sol"
+path = "../solutions/14_type_system/type_option1.rs"
+
+[[bin]]
+name = "result1"
+path = "14_type_system/result1.rs"
+
+[[bin]]
+name = "result1_sol"
+path = "../solutions/14_type_system/result1.rs"
+
+[[bin]]
+name = "impl_trait1"
+path = "14_type_system/impl_trait1.rs"
+
+[[bin]]
+name = "impl_trait1_sol"
+path = "../solutions/14_type_system/impl_trait1.rs"
+
+[[bin]]
+name = "from_into1"
+path = "14_type_system/from_into1.rs"
+
+[[bin]]
+name = "from_into1_sol"
+path = "../solutions/14_type_system/from_into1.rs"
+
+[[bin]]
+name = "iterator1"
+path = "15_traits/iterator1.rs"
+
+[[bin]]
+name = "iterator1_sol"
+path = "../solutions/15_traits/iterator1.rs"
+
+[[bin]]
+name = "display1"
+path = "15_traits/display1.rs"
+
+[[bin]]
+name = "display1_sol"
+path = "../solutions/15_traits/display1.rs"
+
+[[bin]]
+name = "default1"
+path = "15_traits/default1.rs"
+
+[[bin]]
+name = "default1_sol"
+path = "../solutions/15_traits/default1.rs"
+
+[[bin]]
+name = "send_sync1"
+path = "15_traits/send_sync1.rs"
+
+[[bin]]
+name = "send_sync1_sol"
+path = "../solutions/15_traits/send_sync1.rs"
+
+[dependencies]
+axum = { version = "0.7", features = ["ws"] }
+tokio = { version = "1", features = ["full"] }
+tower = { version = "0.4", features = ["util", "limit"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+thiserror = "1"
+anyhow = "1"
+tower-http = { version = "0.5", features = ["trace", "cors", "timeout"] }
+axum-extra = { version = "0.9", features = ["typed-header"] }
+sqlx = { version = "0.8", features = ["runtime-tokio", "sqlite"] }
+clap = { version = "4", features = ["derive"] }
