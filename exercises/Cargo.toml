@@ -468,6 +468,30 @@ path = "17_testing/testing4.rs"
 name = "testing4_sol"
 path = "../solutions/17_testing/testing4.rs"
 
+[[bin]]
+name = "jwt1"
+path = "18_jwt_auth/jwt1.rs"
+
+[[bin]]
+name = "jwt1_sol"
+path = "../solutions/18_jwt_auth/jwt1.rs"
+
+[[bin]]
+name = "jwt2"
+path = "18_jwt_auth/jwt2.rs"
+
+[[bin]]
+name = "jwt2_sol"
+path = "../solutions/18_jwt_auth/jwt2.rs"
+
+[[bin]]
+name = "jwt3"
+path = "18_jwt_auth/jwt3.rs"
+
+[[bin]]
+name = "jwt3_sol"
+path = "../solutions/18_jwt_auth/jwt3.rs"
+
 [dependencies]
 axum = { version = "0.7", features = ["ws"] }
 tokio = { version = "1", features = ["full"] }

@@ -415,3 +415,24 @@ dir = "17_testing"
 test = true
 strict_clippy = false
 hint = "Use server.register(mock).await"
+
+[[exercises]]
+name = "jwt1"
+dir = "18_jwt_auth"
+test = true
+strict_clippy = false
+hint = "encode(&Header::default(), &claims, &EncodingKey::from_secret(secret.as_bytes()))"
+
+[[exercises]]
+name = "jwt2"
+dir = "18_jwt_auth"
+test = true
+strict_clippy = false
+hint = "decode::<Claims>(token, &DecodingKey::from_secret(secret.as_bytes()), &Validation::default())"
+
+[[exercises]]
+name = "jwt3"
+dir = "18_jwt_auth"
+test = true
+strict_clippy = false
+hint = "parts.headers.get(AUTHORIZATION)"
