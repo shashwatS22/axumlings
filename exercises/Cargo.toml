@@ -492,6 +492,30 @@ path = "18_jwt_auth/jwt3.rs"
 name = "jwt3_sol"
 path = "../solutions/18_jwt_auth/jwt3.rs"
 
+[[bin]]
+name = "obs1"
+path = "19_observability/obs1.rs"
+
+[[bin]]
+name = "obs1_sol"
+path = "../solutions/19_observability/obs1.rs"
+
+[[bin]]
+name = "obs2"
+path = "19_observability/obs2.rs"
+
+[[bin]]
+name = "obs2_sol"
+path = "../solutions/19_observability/obs2.rs"
+
+[[bin]]
+name = "obs3"
+path = "19_observability/obs3.rs"
+
+[[bin]]
+name = "obs3_sol"
+path = "../solutions/19_observability/obs3.rs"
+
 [dependencies]
 axum = { version = "0.7", features = ["ws"] }
 tokio = { version = "1", features = ["full"] }
@@ -512,6 +536,10 @@ wiremock = "0.6.5"
 http-body-util = "0.1.3"
 reqwest = "0.13.2"
 jsonwebtoken = "10.3.0"
+metrics = "0.24.3"
+metrics-exporter-prometheus = { version = "0.18.1", features = [
+    "http-listener",
+] }
 
 [dev-dependencies]
 mini-redis = "0.4.1"

@@ -436,3 +436,24 @@ dir = "18_jwt_auth"
 test = true
 strict_clippy = false
 hint = "parts.headers.get(AUTHORIZATION)"
+
+[[exercises]]
+name = "obs1"
+dir = "19_observability"
+test = true
+strict_clippy = false
+hint = "Add #[instrument] attribute above your async function"
+
+[[exercises]]
+name = "obs2"
+dir = "19_observability"
+test = true
+strict_clippy = false
+hint = "Use span!(Level::INFO, \"job_execution\", job_id) and work.instrument(my_span).await"
+
+[[exercises]]
+name = "obs3"
+dir = "19_observability"
+test = true
+strict_clippy = false
+hint = "PrometheusBuilder::new().install_recorder().unwrap() and counter!(\"http_requests_total\", \"method\" => method.to_string()).increment(1)"
