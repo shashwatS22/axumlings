@@ -412,6 +412,30 @@ path = "15_traits/send_sync1.rs"
 name = "send_sync1_sol"
 path = "../solutions/15_traits/send_sync1.rs"
 
+[[bin]]
+name = "redis1"
+path = "16_redis/redis1.rs"
+
+[[bin]]
+name = "redis1_sol"
+path = "../solutions/16_redis/redis1.rs"
+
+[[bin]]
+name = "redis2"
+path = "16_redis/redis2.rs"
+
+[[bin]]
+name = "redis2_sol"
+path = "../solutions/16_redis/redis2.rs"
+
+[[bin]]
+name = "redis3"
+path = "16_redis/redis3.rs"
+
+[[bin]]
+name = "redis3_sol"
+path = "../solutions/16_redis/redis3.rs"
+
 [dependencies]
 axum = { version = "0.7", features = ["ws"] }
 tokio = { version = "1", features = ["full"] }
@@ -426,3 +450,8 @@ tower-http = { version = "0.5", features = ["trace", "cors", "timeout"] }
 axum-extra = { version = "0.9", features = ["typed-header"] }
 sqlx = { version = "0.8", features = ["runtime-tokio", "sqlite"] }
 clap = { version = "4", features = ["derive"] }
+redis = { version = "1.0.5", features = ["tokio-comp"] }
+deadpool-redis = "0.23.0"
+
+[dev-dependencies]
+mini-redis = "0.4.1"

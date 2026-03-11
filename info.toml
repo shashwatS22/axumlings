@@ -366,3 +366,24 @@ dir = "15_traits"
 test = true
 strict_clippy = false
 hint = "T: Send + 'static for thread::spawn"
+
+[[exercises]]
+name = "redis1"
+dir = "16_redis"
+test = true
+strict_clippy = false
+hint = "Use con.set_ex, con.get, and con.del"
+
+[[exercises]]
+name = "redis2"
+dir = "16_redis"
+test = true
+strict_clippy = false
+hint = "redis::pipe().set(\"a\", \"1\").set(\"b\", \"2\").incr(\"counter\", 1).query_async(con).await"
+
+[[exercises]]
+name = "redis3"
+dir = "16_redis"
+test = true
+strict_clippy = false
+hint = "redis::Script::new(lua_src).key(key).arg(amount).invoke_async(con).await"
