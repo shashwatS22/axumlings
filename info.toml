@@ -387,3 +387,31 @@ dir = "16_redis"
 test = true
 strict_clippy = false
 hint = "redis::Script::new(lua_src).key(key).arg(amount).invoke_async(con).await"
+
+[[exercises]]
+name = "testing1"
+dir = "17_testing"
+test = true
+strict_clippy = false
+hint = "Use #[tokio::test] on an async function"
+
+[[exercises]]
+name = "testing2"
+dir = "17_testing"
+test = true
+strict_clippy = false
+hint = "Use oneshot(Request::builder().uri(\"/\").body(Body::empty()).unwrap())"
+
+[[exercises]]
+name = "testing3"
+dir = "17_testing"
+test = true
+strict_clippy = false
+hint = "Pass Arc::new(AppState { count: 42 }) directly to app()"
+
+[[exercises]]
+name = "testing4"
+dir = "17_testing"
+test = true
+strict_clippy = false
+hint = "Use server.register(mock).await"
