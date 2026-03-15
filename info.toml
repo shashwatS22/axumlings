@@ -32,11 +32,18 @@ strict_clippy = false
 hint = "Use Router::nest() for sub-routes."
 
 [[exercises]]
+name = "routing4"
+dir = "01_routing"
+test = true
+strict_clippy = false
+hint = "Use two .route() calls: one for /tasks with GET and POST, one for /tasks/:id with PUT and DELETE. Chain methods on each route."
+
+[[exercises]]
 name = "path1"
 dir = "02_extractors"
 test = true
 strict_clippy = false
-hint = "Path(id): Path<u32>"
+hint = "Use the Path extractor to get a path segment. The type parameter matches the segment (e.g. u32 for numeric)."
 
 [[exercises]]
 name = "query1"
@@ -60,6 +67,20 @@ strict_clippy = false
 hint = "Use request.headers().get(\"X-User-Name\") or TypedHeader"
 
 [[exercises]]
+name = "path2"
+dir = "02_extractors"
+test = true
+strict_clippy = false
+hint = "Path can extract multiple segments using a tuple type. Check the Path extractor docs for multi-segment syntax."
+
+[[exercises]]
+name = "custom_extractor1"
+dir = "02_extractors"
+test = true
+strict_clippy = false
+hint = "impl FromRequestParts for AuthUser, extract Bearer from Authorization header"
+
+[[exercises]]
 name = "json_response1"
 dir = "03_responses"
 test = true
@@ -81,6 +102,13 @@ strict_clippy = false
 hint = "[(header::CONTENT_TYPE, \"application/json\")]"
 
 [[exercises]]
+name = "into_response_enum1"
+dir = "03_responses"
+test = true
+strict_clippy = false
+hint = "impl IntoResponse for ApiResponse enum with match on variants"
+
+[[exercises]]
 name = "arc_state1"
 dir = "04_state"
 test = true
@@ -99,7 +127,14 @@ name = "atomic1"
 dir = "04_state"
 test = true
 strict_clippy = false
-hint = "n.fetch_add(1, Ordering::SeqCst)"
+hint = "AtomicUsize has fetch_add to atomically increment. Return the value before incrementing."
+
+[[exercises]]
+name = "from_ref1"
+dir = "04_state"
+test = true
+strict_clippy = false
+hint = "Implement FromRef to extract a subset of AppState. The impl receives &AppState and returns the piece handlers need."
 
 [[exercises]]
 name = "sleep1"
@@ -128,6 +163,27 @@ dir = "05_tokio_async"
 test = true
 strict_clippy = false
 hint = "with_graceful_shutdown(shutdown_signal())"
+
+[[exercises]]
+name = "broadcast1"
+dir = "05_tokio_async"
+test = true
+strict_clippy = false
+hint = "tokio::sync::broadcast::channel(16)"
+
+[[exercises]]
+name = "select1"
+dir = "05_tokio_async"
+test = true
+strict_clippy = false
+hint = "Use tokio::select! to race slow_op() against a 50ms sleep. Return different strings depending on which completes first."
+
+[[exercises]]
+name = "interval1"
+dir = "05_tokio_async"
+test = true
+strict_clippy = false
+hint = "tokio::time::interval(Duration::from_millis(100))"
 
 [[exercises]]
 name = "nested1"
@@ -165,6 +221,41 @@ strict_clippy = false
 hint = "#[serde(flatten)]"
 
 [[exercises]]
+name = "skip1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "#[serde(skip_serializing_if = \"Option::is_none\")]"
+
+[[exercises]]
+name = "untagged1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "#[serde(untagged)]"
+
+[[exercises]]
+name = "alias1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "#[serde(alias = \"name\")] and #[serde(rename = \"json_name\")]"
+
+[[exercises]]
+name = "value1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "serde_json::Value for dynamic JSON"
+
+[[exercises]]
+name = "custom_deserialize1"
+dir = "06_serde"
+test = true
+strict_clippy = false
+hint = "impl Deserialize for Color with custom logic"
+
+[[exercises]]
 name = "into_response1"
 dir = "07_errors"
 test = true
@@ -184,6 +275,20 @@ dir = "07_errors"
 test = true
 strict_clippy = false
 hint = "fn handler() -> Result<impl IntoResponse, AppError> and ?"
+
+[[exercises]]
+name = "anyhow1"
+dir = "07_errors"
+test = true
+strict_clippy = false
+hint = "anyhow::Context for .context(\"message\")"
+
+[[exercises]]
+name = "from1"
+dir = "07_errors"
+test = true
+strict_clippy = false
+hint = "#[from] on enum variants for automatic From impl"
 
 [[exercises]]
 name = "trace1"
@@ -214,6 +319,20 @@ strict_clippy = false
 hint = "TimeoutLayer::new(Duration::from_secs(1))"
 
 [[exercises]]
+name = "middleware_state1"
+dir = "08_middleware"
+test = true
+strict_clippy = false
+hint = "Layer that reads state, e.g. TraceLayer with custom logic"
+
+[[exercises]]
+name = "route_layer1"
+dir = "08_middleware"
+test = true
+strict_clippy = false
+hint = "route_layer vs layer - route_layer applies to specific route"
+
+[[exercises]]
 name = "pool1"
 dir = "09_db"
 test = true
@@ -226,6 +345,20 @@ dir = "09_db"
 test = true
 strict_clippy = false
 hint = "pool.begin().await, tx.commit()"
+
+[[exercises]]
+name = "query_as1"
+dir = "09_db"
+test = true
+strict_clippy = false
+hint = "sqlx::query_as! macro with #[derive(FromRow)]"
+
+[[exercises]]
+name = "migrations1"
+dir = "09_db"
+test = true
+strict_clippy = false
+hint = "sqlx has a migrate! macro that takes a path. Run it against the pool before starting the server."
 
 [[exercises]]
 name = "env1"
@@ -242,11 +375,32 @@ strict_clippy = false
 hint = "#[derive(Parser)] struct Args"
 
 [[exercises]]
+name = "config1"
+dir = "10_config"
+test = true
+strict_clippy = false
+hint = "config::Config::builder() with env overlay"
+
+[[exercises]]
+name = "secrecy1"
+dir = "10_config"
+test = true
+strict_clippy = false
+hint = "secrecy::Secret<String> for sensitive config"
+
+[[exercises]]
 name = "ws1"
 dir = "11_websockets"
 test = true
 strict_clippy = false
 hint = "WebSocketUpgrade, ws.on_upgrade"
+
+[[exercises]]
+name = "sse1"
+dir = "11_websockets"
+test = true
+strict_clippy = false
+hint = "axum::response::sse::Sse with Event stream"
 
 [[exercises]]
 name = "health1"
@@ -270,6 +424,27 @@ strict_clippy = false
 hint = "tracing::info!"
 
 [[exercises]]
+name = "body_limit1"
+dir = "12_production"
+test = true
+strict_clippy = false
+hint = "tower_http has a body limit layer. Look for DefaultBodyLimit or RequestBodyLimitLayer."
+
+[[exercises]]
+name = "request_id1"
+dir = "12_production"
+test = true
+strict_clippy = false
+hint = "tower_http has request_id layers: one to set a UUID, one to propagate it. Check the request_id module."
+
+[[exercises]]
+name = "shutdown_full1"
+dir = "12_production"
+test = true
+strict_clippy = false
+hint = "axum::serve with tower::util::ServiceExt::with_graceful_shutdown"
+
+[[exercises]]
 name = "move1"
 dir = "13_ownership"
 test = true
@@ -288,7 +463,7 @@ name = "lifetime1"
 dir = "13_ownership"
 test = true
 strict_clippy = false
-hint = "fn longest<'a>(x: &'a str, y: &'a str) -> &'a str"
+hint = "The return value borrows from the inputs. Add a lifetime parameter to connect them."
 
 [[exercises]]
 name = "arc1"
@@ -379,7 +554,7 @@ name = "redis2"
 dir = "16_redis"
 test = true
 strict_clippy = false
-hint = "redis::pipe().set(\"a\", \"1\").set(\"b\", \"2\").incr(\"counter\", 1).query_async(con).await"
+hint = "Use redis::pipe() to chain set/incr commands, then query_async to execute them in one round-trip."
 
 [[exercises]]
 name = "redis3"
@@ -428,7 +603,7 @@ name = "jwt2"
 dir = "18_jwt_auth"
 test = true
 strict_clippy = false
-hint = "decode::<Claims>(token, &DecodingKey::from_secret(secret.as_bytes()), &Validation::default())"
+hint = "Use jsonwebtoken::decode with DecodingKey::from_secret and Validation::default(). Handle decode errors."
 
 [[exercises]]
 name = "jwt3"
@@ -449,7 +624,7 @@ name = "obs2"
 dir = "19_observability"
 test = true
 strict_clippy = false
-hint = "Use span!(Level::INFO, \"job_execution\", job_id) and work.instrument(my_span).await"
+hint = "Create a span with job_id as a field, then attach it to the work future using .instrument() so it's traced."
 
 [[exercises]]
 name = "obs3"

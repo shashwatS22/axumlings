@@ -1,0 +1,41 @@
+// Request ID Middleware
+//
+// Add x-request-id header to every request and propagate to response.
+// Use SetRequestIdLayer + PropagateRequestIdLayer with MakeRequestUuid.
+//
+// Hint: tower_http has request_id layers. One sets a UUID on the request, one propagates it to the response.
+
+use axum::{routing::get, Router};
+
+fn app() -> Router {
+    Router::new()
+        .route("/", get(|| async { "ok" }))
+        // TODO: Add layers to set and propagate x-request-id header
+}
+
+#[tokio::main]
+async fn main() {
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:0")
+        .await
+        .unwrap();
+    axum::serve(listener, app()).await.unwrap();
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use axum::body::Body;
+    use axum::http::Request;
+    use tower::util::ServiceExt;
+
+    #[tokio::test]
+    async fn test_request_id() {
+        let app = app();
+        let response = app
+            .oneshot(Request::builder().uri("/").body(Body::empty()).unwrap())
+            .await
+            .unwrap();
+        let id = response.headers().get("x-request-id");
+        assert!(id.is_some(), "x-request-id header should be present");
+    }
+}

@@ -8,15 +8,13 @@
 use tracing::{info, span, Instrument, Level};
 
 pub async fn run_job(job_id: &str) {
-    // TODO: Create a span named "job_execution" with `job_id` as a field using `span!`
-    // Hint: `let my_span = span!(Level::INFO, "job_execution", job_id);`
+    // TODO: Create a span named "job_execution" with job_id as a field
 
     let work = async {
         info!("doing work");
     };
 
-    // TODO: attach the span to the `work` future using `.instrument(my_span)` and await it
-    // Hint: `work.instrument(my_span).await;`
+    // TODO: Attach the span to the work future so it's traced, then await it
 }
 
 fn main() {

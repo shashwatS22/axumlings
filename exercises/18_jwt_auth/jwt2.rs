@@ -13,8 +13,7 @@ pub struct Claims {
 }
 
 pub fn decode_token(token: &str, secret: &str) -> std::result::Result<Claims, ()> {
-    // TODO: use jsonwebtoken::decode, DecodingKey, and Validation
-    // Hint: `decode::<Claims>(token, &DecodingKey::from_secret(secret.as_bytes()), &Validation::default())`
+    // TODO: Use jsonwebtoken::decode with DecodingKey and Validation. Map errors to Err(())
     todo!()
 }
 

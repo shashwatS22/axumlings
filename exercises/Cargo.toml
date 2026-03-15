@@ -29,6 +29,14 @@ name = "routing3_sol"
 path = "../solutions/01_routing/routing3.rs"
 
 [[bin]]
+name = "routing4"
+path = "01_routing/routing4.rs"
+
+[[bin]]
+name = "routing4_sol"
+path = "../solutions/01_routing/routing4.rs"
+
+[[bin]]
 name = "path1"
 path = "02_extractors/path1.rs"
 
@@ -61,6 +69,22 @@ name = "header1_sol"
 path = "../solutions/02_extractors/header1.rs"
 
 [[bin]]
+name = "path2"
+path = "02_extractors/path2.rs"
+
+[[bin]]
+name = "path2_sol"
+path = "../solutions/02_extractors/path2.rs"
+
+[[bin]]
+name = "custom_extractor1"
+path = "02_extractors/custom_extractor1.rs"
+
+[[bin]]
+name = "custom_extractor1_sol"
+path = "../solutions/02_extractors/custom_extractor1.rs"
+
+[[bin]]
 name = "json_response1"
 path = "03_responses/json_response1.rs"
 
@@ -85,6 +109,14 @@ name = "headers1_sol"
 path = "../solutions/03_responses/headers1.rs"
 
 [[bin]]
+name = "into_response_enum1"
+path = "03_responses/into_response_enum1.rs"
+
+[[bin]]
+name = "into_response_enum1_sol"
+path = "../solutions/03_responses/into_response_enum1.rs"
+
+[[bin]]
 name = "arc_state1"
 path = "04_state/arc_state1.rs"
 
@@ -107,6 +139,14 @@ path = "04_state/atomic1.rs"
 [[bin]]
 name = "atomic1_sol"
 path = "../solutions/04_state/atomic1.rs"
+
+[[bin]]
+name = "from_ref1"
+path = "04_state/from_ref1.rs"
+
+[[bin]]
+name = "from_ref1_sol"
+path = "../solutions/04_state/from_ref1.rs"
 
 [[bin]]
 name = "sleep1"
@@ -139,6 +179,30 @@ path = "05_tokio_async/shutdown1.rs"
 [[bin]]
 name = "shutdown1_sol"
 path = "../solutions/05_tokio_async/shutdown1.rs"
+
+[[bin]]
+name = "broadcast1"
+path = "05_tokio_async/broadcast1.rs"
+
+[[bin]]
+name = "broadcast1_sol"
+path = "../solutions/05_tokio_async/broadcast1.rs"
+
+[[bin]]
+name = "select1"
+path = "05_tokio_async/select1.rs"
+
+[[bin]]
+name = "select1_sol"
+path = "../solutions/05_tokio_async/select1.rs"
+
+[[bin]]
+name = "interval1"
+path = "05_tokio_async/interval1.rs"
+
+[[bin]]
+name = "interval1_sol"
+path = "../solutions/05_tokio_async/interval1.rs"
 
 [[bin]]
 name = "nested1"
@@ -181,6 +245,46 @@ name = "flatten1_sol"
 path = "../solutions/06_serde/flatten1.rs"
 
 [[bin]]
+name = "skip1"
+path = "06_serde/skip1.rs"
+
+[[bin]]
+name = "skip1_sol"
+path = "../solutions/06_serde/skip1.rs"
+
+[[bin]]
+name = "untagged1"
+path = "06_serde/untagged1.rs"
+
+[[bin]]
+name = "untagged1_sol"
+path = "../solutions/06_serde/untagged1.rs"
+
+[[bin]]
+name = "alias1"
+path = "06_serde/alias1.rs"
+
+[[bin]]
+name = "alias1_sol"
+path = "../solutions/06_serde/alias1.rs"
+
+[[bin]]
+name = "value1"
+path = "06_serde/value1.rs"
+
+[[bin]]
+name = "value1_sol"
+path = "../solutions/06_serde/value1.rs"
+
+[[bin]]
+name = "custom_deserialize1"
+path = "06_serde/custom_deserialize1.rs"
+
+[[bin]]
+name = "custom_deserialize1_sol"
+path = "../solutions/06_serde/custom_deserialize1.rs"
+
+[[bin]]
 name = "into_response1"
 path = "07_errors/into_response1.rs"
 
@@ -203,6 +307,22 @@ path = "07_errors/question1.rs"
 [[bin]]
 name = "question1_sol"
 path = "../solutions/07_errors/question1.rs"
+
+[[bin]]
+name = "anyhow1"
+path = "07_errors/anyhow1.rs"
+
+[[bin]]
+name = "anyhow1_sol"
+path = "../solutions/07_errors/anyhow1.rs"
+
+[[bin]]
+name = "from1"
+path = "07_errors/from1.rs"
+
+[[bin]]
+name = "from1_sol"
+path = "../solutions/07_errors/from1.rs"
 
 [[bin]]
 name = "trace1"
@@ -237,6 +357,22 @@ name = "timeout1_sol"
 path = "../solutions/08_middleware/timeout1.rs"
 
 [[bin]]
+name = "middleware_state1"
+path = "08_middleware/middleware_state1.rs"
+
+[[bin]]
+name = "middleware_state1_sol"
+path = "../solutions/08_middleware/middleware_state1.rs"
+
+[[bin]]
+name = "route_layer1"
+path = "08_middleware/route_layer1.rs"
+
+[[bin]]
+name = "route_layer1_sol"
+path = "../solutions/08_middleware/route_layer1.rs"
+
+[[bin]]
 name = "pool1"
 path = "09_db/pool1.rs"
 
@@ -251,6 +387,22 @@ path = "09_db/transaction1.rs"
 [[bin]]
 name = "transaction1_sol"
 path = "../solutions/09_db/transaction1.rs"
+
+[[bin]]
+name = "query_as1"
+path = "09_db/query_as1.rs"
+
+[[bin]]
+name = "query_as1_sol"
+path = "../solutions/09_db/query_as1.rs"
+
+[[bin]]
+name = "migrations1"
+path = "09_db/migrations1.rs"
+
+[[bin]]
+name = "migrations1_sol"
+path = "../solutions/09_db/migrations1.rs"
 
 [[bin]]
 name = "env1"
@@ -269,12 +421,36 @@ name = "clap1_sol"
 path = "../solutions/10_config/clap1.rs"
 
 [[bin]]
+name = "config1"
+path = "10_config/config1.rs"
+
+[[bin]]
+name = "config1_sol"
+path = "../solutions/10_config/config1.rs"
+
+[[bin]]
+name = "secrecy1"
+path = "10_config/secrecy1.rs"
+
+[[bin]]
+name = "secrecy1_sol"
+path = "../solutions/10_config/secrecy1.rs"
+
+[[bin]]
 name = "ws1"
 path = "11_websockets/ws1.rs"
 
 [[bin]]
 name = "ws1_sol"
 path = "../solutions/11_websockets/ws1.rs"
+
+[[bin]]
+name = "sse1"
+path = "11_websockets/sse1.rs"
+
+[[bin]]
+name = "sse1_sol"
+path = "../solutions/11_websockets/sse1.rs"
 
 [[bin]]
 name = "health1"
@@ -299,6 +475,30 @@ path = "12_production/logging1.rs"
 [[bin]]
 name = "logging1_sol"
 path = "../solutions/12_production/logging1.rs"
+
+[[bin]]
+name = "body_limit1"
+path = "12_production/body_limit1.rs"
+
+[[bin]]
+name = "body_limit1_sol"
+path = "../solutions/12_production/body_limit1.rs"
+
+[[bin]]
+name = "request_id1"
+path = "12_production/request_id1.rs"
+
+[[bin]]
+name = "request_id1_sol"
+path = "../solutions/12_production/request_id1.rs"
+
+[[bin]]
+name = "shutdown_full1"
+path = "12_production/shutdown_full1.rs"
+
+[[bin]]
+name = "shutdown_full1_sol"
+path = "../solutions/12_production/shutdown_full1.rs"
 
 [[bin]]
 name = "move1"
@@ -526,7 +726,7 @@ tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 thiserror = "1"
 anyhow = "1"
-tower-http = { version = "0.5", features = ["trace", "cors", "timeout"] }
+tower-http = { version = "0.5", features = ["trace", "cors", "timeout", "request-id"] }
 axum-extra = { version = "0.9", features = ["typed-header"] }
 sqlx = { version = "0.8", features = ["runtime-tokio", "sqlite"] }
 clap = { version = "4", features = ["derive"] }
@@ -540,6 +740,9 @@ metrics = "0.24.3"
 metrics-exporter-prometheus = { version = "0.18.1", features = [
     "http-listener",
 ] }
+config = "0.14"
+secrecy = { version = "0.8", features = ["serde"] }
+tokio-stream = "0.1"
 
 [dev-dependencies]
 mini-redis = "0.4.1"

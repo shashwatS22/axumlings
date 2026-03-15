@@ -28,10 +28,7 @@ impl<S: Send + Sync> FromRequestParts<S> for AuthUser {
     type Rejection = StatusCode;
 
     async fn from_request_parts(parts: &mut Parts, _state: &S) -> Result<Self, Self::Rejection> {
-        // TODO: Extract AUTHORIZATION header from `parts.headers`
-        // TODO: Strip "Bearer " prefix
-        // TODO: Decode JWT using `jsonwebtoken::decode` with secret "secret"
-        // TODO: Return `AuthUser { claims: decoded.claims }` or `Err(StatusCode::UNAUTHORIZED)`
+        // TODO: Get Authorization header, strip "Bearer " prefix, decode JWT, return AuthUser or UNAUTHORIZED
         todo!()
     }
 }
@@ -43,7 +40,7 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use http::Request;
+    use axum::http::Request;
     use jsonwebtoken::{encode, EncodingKey, Header};
 
     #[tokio::test]
